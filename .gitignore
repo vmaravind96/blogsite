@@ -1,0 +1,4 @@
+.idea/*
+myblog/__pycache__/*
+user/__pycache__/*
+blogsite/__pycache__/*

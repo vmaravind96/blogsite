@@ -1,0 +1,21 @@
+{% extends "myblog/base.html" %}
+{% block content %}
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{message.tags}}">{{message}}</div>
+    {% endfor %}
+{% endif%}
+<h3 class="content-section">Newsfeed</h3>
+{% for post in posts %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata ">
+            <a class="mr-2" href="{% url 'profile' %}">{{post.author.username}} </a>
+            <small class="text-muted">{{post.posted_date |date:"d F, Y"}}</small>
+        </div>
+        <h4 class="article-content" href="#">{{post.title}}</h4>
+        <p class="article-content"> {{post.content}}</p>
+    </div>
+</article>
+{% endfor %}
+{% endblock %}
