@@ -2,3 +2,5 @@
 myblog/__pycache__/*
 user/__pycache__/*
 blogsite/__pycache__/*
+media/*
+user/migrations/__pycache__/*

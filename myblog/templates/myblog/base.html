@@ -29,14 +29,16 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 <div class="container">
-    <a class='topnav' href="/">MyBlog</a>
-    <a class='topnav' href="/">Home</a>
-    <a class='topnav' href="{% url 'myblog-about' %}">About</a>
+    <a class="nav-link1" href="/">MyBlog</a>
+    <a class="nav-link1" href="/">Home</a>
+    <a class="nav-link1" href="{% url 'myblog-about' %}">About</a>
     {% if user.is_authenticated %}
-        <a class='topnav-right' href="{% url 'logout' %}">Logout</a>
+    <a class="nav-link1" href="{% url 'post-create' %}">Post</a>
+    <a class="nav-link1" href="{% url 'profile' %}">Profile</a>
+    <a class="nav-link1" href="{% url 'logout' %}">Logout</a>
     {% else %}
-        <a class='topnav-right' href="{% url 'login' %}">Login</a>
-        <a class='topnav-right' href="{% url 'register' %}">Register</a>
+    <a class="nav-link1" href="{% url 'login' %}">Login</a>
+    <a class="nav-link1" href="{% url 'register' %}">Register</a>
     {% endif %}
 </div>
 <br><br>
