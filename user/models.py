@@ -10,8 +10,8 @@ class Profile(models.Model):
     def __str__(self):
         return '{} Profile'.format(self.user.username)
 
-    def save(self):
-        super().save()
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
         image = Image.open(self.image.path).convert('RGB')
         if image.height > 150 or image.width > 150:
             size = (150, 150)
